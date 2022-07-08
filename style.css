@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     height: 150vh;
     text-align: center;
+    overflow-x: hidden !important;
   }
   
   .heading{
@@ -61,7 +62,7 @@ body {
   }
   
   .image1 img{
-      margin-top: 30%;
+      margin-top: 100px;
       width: 270px;
       height: 320px;
       border: 15px solid #ff869e;
@@ -73,16 +74,20 @@ body {
       align-items: center;
       justify-content: center;
       text-align: center;
-      margin-top: 10% ;
+      margin-top: 60px ;
+      margin-bottom: 45px;
       width: 100%;
       font-family: 'Pacifico', cursive;
       color: #A10035;
       text-shadow:1px 1px #ff869e;
+      font-size: 25px;
+      letter-spacing: 0.5px;
   }
 
   .container {
+    margin-left: 30%;
     position:relative;
-    width: 200px;
+    width:200px;
     perspective: 1000px;
     margin-bottom: 400px;
   }
@@ -110,8 +115,10 @@ body {
     margin: auto;
     font-size: 2rem;
   }
-  
-  
+
+  #myAudio{
+    visibility: hidden;
+  }
   .carousel__face:nth-child(1) {
     background-image: url("mp2.jpeg");
     transform: rotateY(  0deg) translateZ(430px); }
@@ -152,5 +159,56 @@ body {
   }
 
   .text2{
-      font-size: 4rem;
+      font-size: 3rem;
+      color: #FF869E;
+      text-shadow: 4px 4px #FFC4C4 ;
+  }
+
+  .image11 img{
+    width: 100%;
+  }
+
+  .reveal {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    font-size: 6em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 0.5em; 
+  }
+  
+   .revealspan {
+    color: #FFE7BF;
+    mix-blend-mode: lighten;
+  }
+  
+  .reveal:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #A10035;
+    animation: reveal 6s linear infinite;
+  }
+  
+  @keyframes reveal {
+    0% {
+      left: -50px;
+    }
+    50% {
+      left: calc(100% - 150px);
+    }
+    100% {
+      left: -50px;
+    }
+  }
+
+  .image12 img{
+    margin-top: 100px;
+    margin-bottom: 60px;
+    width: 100%;
   }

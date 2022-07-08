@@ -13,17 +13,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pacifico&display=swap" rel="stylesheet">
   </head>
-  <body>
-	<script src="index.js">
-    document.addEventListener('click', musicPlay);
-function musicPlay() {
-    document.getElementById('myAudio').play();
-    document.removeEventListener('click', musicPlay);
-}
+  <body onload="addEvent()">
+	<script>
+      function addEvent(){
+         document.body.addEventListener("click", play)
+       }
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+
   </script>
-  <audio autoplay loop controls id="myAudio">
-    <source src="Spring-Flowers.mp3">
-  </audio>
+   <audio id="audio" src="Spring-Flowers.mp3"></audio>
     <div class="heading">
     <div class="words word-1">
         <span>H</span>
